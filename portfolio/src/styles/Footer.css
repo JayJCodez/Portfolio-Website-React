@@ -1,0 +1,4 @@
+/* Override Bootstrap footer padding */
+.footer.py-5 {
+    padding-bottom: 0 !important; /* Remove bottom padding */
+}

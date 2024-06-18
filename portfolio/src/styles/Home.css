@@ -1,0 +1,331 @@
+/* src/assets/fonts/fonts.css */
+@font-face {
+    font-family: Freeline;
+    src: url('../assets/fonts//FreeLine.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: Comfortaa;
+    src: url('../assets/fonts/Comfortaa/static/Comfortaa-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: Playwrite;
+    src: url('../assets/fonts/Playwrite_ZA/static/PlaywriteZA-Light.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+.motivation_text{
+
+    font-family: Playwrite;
+    color: white;
+    font-size: large;
+
+  }
+
+
+
+
+.name{
+
+    font-family: Comfortaa;
+    color: white;
+    font-size: 90px;
+
+}
+
+.developIcon{
+
+    margin-left: 30px;
+    height: 120px;
+    width: auto;
+    
+
+}
+
+
+.firstsection{
+
+
+    padding-top: 10px;
+    margin-bottom: 20px;
+   
+
+}
+
+.img .circle_icon{
+
+    width: 5px;
+    height: auto;
+
+}
+
+.circular-container {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: rgb(255, 255, 255);
+    border-width: 3px;
+    max-width: 300px; /* Adjust as needed */
+    
+  }
+
+  .text {
+    font-size: calc(0.7em + 0.5vw); /* Smaller, responsive text size */
+    word-wrap: break-word;
+    line-height: 1.2; /* Adjust line-height if needed for better readability */
+  }
+
+.bulletpoint{
+
+
+    height: 15px;
+    width: auto;
+
+}
+  
+
+.transparent-card {
+    background-color: rgba(255, 255, 255, 0.5); /* White background with 50% opacity */
+    border: none; /* Remove card border */
+  }
+
+.transparent{
+
+    background-color: rgba(255, 255, 255, 0.5); /* White background with 50% opacity */
+    border: none; /* Remove card border */
+
+}
+
+.first{
+
+    background-image: url(../assets/backgroundhome.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    border-radius: 8px; 
+    padding: 10px 0px 20px 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+
+}
+
+.circle{
+
+    background-image: url(../assets/Project/icons/icons8-circle-96.png);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    border-radius: 8px; 
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+
+}
+
+.personalcard{
+
+    border-color: white;
+    border-width: 3px;
+    border-radius: 30px;
+
+
+
+}
+
+.header_intro_text {
+    position: relative;
+    padding: 20px;
+    background: white; /* Background color of the element */
+    border-radius: 30px; /* Border radius of the element */
+    z-index: 1;
+    align-items: center;
+    display: flex;
+}
+
+.header_intro_text::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    border-radius: inherit; /* Match the border radius of the element */
+    z-index: -1;
+}
+
+.header_intro_text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black; /* Background color of the element */
+    border-radius: inherit; /* Match the border radius of the element */
+    z-index: -1;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 100px; /* Adjust height as needed */
+    background-color: white;
+    margin: 0 15px; /* Adjust margin as needed */
+  }
+
+/* .navimg{
+
+  margin: 0px;
+
+} */
+
+.img{
+
+    height: auto;
+    width: 50px;
+
+}
+
+.projects-section{
+
+    background-color: #000;
+
+}
+
+.heading{
+
+    color: white;
+    margin-bottom: 30px;
+    font-family: Comfortaa;
+   
+
+}
+
+.contact-section{
+
+    background-color: #000;
+
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+.about_para{
+
+    color: white;
+
+}
+
+.projectimg{
+
+    height: 300px;
+    width: auto;
+
+}
+
+.subheading{
+
+    color: azure;
+
+}
+
+.projectheading{
+
+    color: white;
+    margin-bottom: 50px;
+
+}
+
+.covercardcontainer{
+
+    margin-bottom: 50px;
+
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card {
+    opacity: 0;
+    animation: slideUp 0.8s ease forwards;
+}
+
+.card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@media (max-width: 767px) {
+   
+    .cardcolcover{
+
+        display: flex;
+        justify-content: center;
+
+    }
+  
+    .circular-container {
+      margin-bottom: 50px; /* Adjust padding for small screens */
+    }
+
+    .projectcard{
+
+        margin-bottom: 20px;
+
+    }
+  }
+
+  /* Responsive design */
+@media (max-width: 768px) {
+    .col-md-6, .col-md-4, .col-md-2 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .name {
+      text-align: center;
+    }
+  
+    .circular-container {
+        display: none !important; /* Ensure containers are hidden */
+      }
+
+      .circle {
+        display: none !important; /* Ensure containers are hidden */
+      }
+
+      .name {
+        font-size: 2.5rem;
+      }
+  }

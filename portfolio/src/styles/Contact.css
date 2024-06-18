@@ -1,0 +1,93 @@
+@font-face {
+  font-family: Poppins;
+  src: url('../assets/fonts//Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('../assets/fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.contact {
+    padding: 60px 0;
+  }
+  
+  .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.5);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 20px;
+  }
+
+h5{
+
+    font-family: Montserrat;
+    
+  }
+
+
+  
+  .contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .contact-form .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+  }
+  
+  .contact-form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .contact-form .btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #007bff;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .toast {
+    background-color: #f8f9fa;
+    border: 1px solid rgba(0,0,0,.1);
+  }
+  
+  .toast-header {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .toast-body {
+    color: #333;
+  }
+  

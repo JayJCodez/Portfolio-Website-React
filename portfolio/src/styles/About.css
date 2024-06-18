@@ -1,0 +1,87 @@
+/* src/styles/About.css */
+@font-face {
+  font-family: Poppins;
+  src: url('../assets/fonts//Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('../assets/fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+p{
+  font-family: Montserrat;
+}
+
+
+
+
+.about {
+    padding: 60px 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  h3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.75rem;
+    color: #555;
+  }
+  
+  p, li {
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 15px;
+  }
+  
+  strong {
+    color: #333;
+  }
+  
+  /* src/styles/About.css */
+.img-small {
+  width: 50px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.skills{
+
+  color: white;
+  
+
+}
+
+.skill_label{
+
+  color: white;
+
+}
+
+.no-bg {
+  background: none !important;
+}
