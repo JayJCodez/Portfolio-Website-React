@@ -41,3 +41,22 @@
     color: #fff;
  
  }
+/* customStyles.css */
+.customdrop {
+    background-color: rgba(59, 30, 139, 0.5) !important;
+  }
+  
+  .customdrop .dropdown-item {
+    color: white;
+  }
+  
+  .customdrop .dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .customdrop .dropdown-item:hover,
+.customdrop .dropdown-item:active,
+.customdrop .dropdown-item:focus {
+  background-color: rgba(59, 30, 139, 0.8) !important;
+  color: #ffffff !important;
+}

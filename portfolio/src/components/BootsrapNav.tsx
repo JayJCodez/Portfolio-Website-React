@@ -69,28 +69,42 @@ export const BootstrapNav = () => {
               </div>
               <i className="fas fa-caret-down" />
               {dropdown && (
-                <div className="dropdown-menu dropdown-menu-dark show">
-                  <Link className="dropdown-item" to="#">
-                    Web Development
+                <div className="dropdown-menu show customdrop">
+                  <Link className="dropdown-item item" to="#">
+                    <p>
+                      Web Development - <small>Coming Soon</small>
+                    </p>
                   </Link>
-                  <Link className="dropdown-item" to="#">
-                    Mobile Development
+                  <Link className="dropdown-item item" to="#">
+                    <p>
+                      Mobile Development - <small>Coming Soon</small>
+                    </p>
                   </Link>
-                  <Link className="dropdown-item" to="#">
-                    API Development
+                  <Link className="dropdown-item item" to="#">
+                    <p>
+                      API Development - <small>Coming Soon</small>
+                    </p>
                   </Link>
-                  <Link className="dropdown-item" to="#">
-                    Database Management
+                  <Link className="dropdown-item item" to="#">
+                    <p>
+                      Database Management - <small>Coming Soon</small>
+                    </p>
                   </Link>
-                  <Link className="dropdown-item" to="#">
-                    Real-Time Applications
+                  <Link className="dropdown-item item" to="#">
+                    <p>
+                      Real-Time Applications - <small>Coming Soon</small>
+                    </p>
                   </Link>
-                  <Link className="dropdown-item" to="#">
-                    DevOps
+                  <Link className="dropdown-item item" to="#">
+                    <p>
+                      DevOps - <small>Coming Soon</small>
+                    </p>
                   </Link>
                   <hr className="dropdown-divider" />
-                  <Link className="dropdown-item" to="#">
-                    Something else here
+                  <Link className="dropdown-item " to="#">
+                    <p>
+                      Others <small>Coming Soon</small>
+                    </p>
                   </Link>
                 </div>
               )}

@@ -693,13 +693,10 @@ export const Home: React.FC = () => {
                       About Me
                     </h2>
                     <p className="about_para wrap">
-                      My name is Jesse Okuji, a 23-year-old recent graduate in
-                      Computer Science. I completed my final exams just two
-                      weeks ago, marking the culmination of my undergraduate
-                      journey. In 2021, I was admitted to London Metropolitan
-                      University, where I immersed myself in the world of
-                      computing and science.
-                      <br />
+                      My name is Jesse Okuji, I'm 23-years-old and a graduate in
+                      Computer Science. In 2021, I was admitted to London
+                      Metropolitan University, where I immersed myself in the
+                      world of computing and science. <br />
                       <br />
                       During my time at university, I honed my skills in
                       programming and software development across various
@@ -713,13 +710,15 @@ export const Home: React.FC = () => {
                       applications such as Library Management Systems for
                       desktops/laptops, Event Management Applications for
                       Android using Kotlin, and a Gadget Fixer Web App built
-                      with Flutter, compatible with all major operating systems.
-                      Additionally, I independently created a cryptocurrency
-                      wallet on the Ethereum blockchain, utilizing Python for
-                      backend development and Flask for frontend implementation.
+                      with Flutter, compatible with all major operating systems
+                      and many more+. Additionally, I independently created a
+                      cryptocurrency wallet on the Ethereum blockchain,
+                      utilizing Python for backend development and Flask for
+                      frontend implementation.
                       <br />
-                      <br />I am adept at self-directed learning, utilizing
-                      online resources such as YouTube and Stack Overflow to
+                      <br />I am adept at self-directed learning, utilizing a
+                      wide range of resources such as Popular Library
+                      Documentation, YouTube, GitHub, Stack Overflow etc to
                       expand my knowledge, troubleshoot challenges, and acquire
                       new skills autonomously.
                     </p>

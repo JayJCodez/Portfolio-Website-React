@@ -13,6 +13,7 @@
     "@gsap/react": "^2.1.1",
     "@types/jquery": "^3.5.30",
     "bootstrap": "^5.3.3",
+    "firebase": "^10.12.2",
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
     "react": "^18.3.1",

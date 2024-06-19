@@ -170,19 +170,19 @@ const About = () => {
               {/* Summary Section */}
               <div className="summary">
                 <p className="text-white aboutmetxt" style={{}}>
-                  My name is Jesse Okuji, a 23-year-old recent graduate in
-                  Computer Science. I completed my final exams just two weeks
-                  ago, marking the culmination of my undergraduate journey. In
-                  2021, I was admitted to London Metropolitan University, where
-                  I immersed myself in the world of computing and science.{" "}
+                  My name is Jesse Okuji, I'm 23-years-old and a graduate in
+                  Computer Science. In 2021, I was admitted to London
+                  Metropolitan University, where I immersed myself in the world
+                  of computing and science.{" "}
                 </p>
                 <br />
                 <p className="text-white aboutmetxt">
                   During my time at university, I honed my skills in programming
                   and software development across various platforms. I am
                   proficient in building applications using a diverse range of
-                  programming languages including Flutter, Java, Python, Kotlin,
-                  TypeScript, HTML, CSS, PHP, SQL, MSSQL, and JavaScript.
+                  programming languages including Flutter, Java, JavaScript
+                  Python, Kotlin, TypeScript, HTML, CSS, PHP, SQL, MSSQL,NoSQL
+                  and JavaScript.
                 </p>
                 <br />
                 <p className="text-white aboutmetxt">
@@ -190,10 +190,10 @@ const About = () => {
                   applications such as Library Management Systems for
                   desktops/laptops, Event Management Applications for Android
                   using Kotlin, and a Gadget Fixer Web App built with Flutter,
-                  compatible with all major operating systems. Additionally, I
-                  independently created a cryptocurrency wallet on the Ethereum
-                  blockchain, utilizing Python for backend development and Flask
-                  for frontend implementation.
+                  compatible with all major operating systems and many more+.
+                  Additionally, I independently created a cryptocurrency wallet
+                  on the Ethereum blockchain, utilizing Python for backend
+                  development and Flask for frontend implementation.
                 </p>
                 <br />
                 <p className="text-white aboutmetxt">
