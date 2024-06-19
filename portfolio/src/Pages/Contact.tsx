@@ -1,6 +1,11 @@
 import { useState } from "react";
 import "../styles/Contact.css";
+import BootstrapNav from "../components/BootsrapNav";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger as GSAPScrollTrigger } from "gsap/all";
 
+gsap.registerPlugin(GSAPScrollTrigger);
 const Contact = () => {
   const [visibility, setVisibility] = useState(false);
 
@@ -10,6 +15,56 @@ const Contact = () => {
     setTimeout(() => setVisibility(false), 10000); // Hide the toast after 3 seconds
   };
 
+  useGSAP(() => {
+    gsap.fromTo(
+      ".contact-form",
+      {
+        duration: 2,
+        x: -100,
+        opacity: 0,
+        yoyo: true,
+        stagger: {
+          each: 0.4, // Adjust this value for the delay between each animation
+        },
+        ease: "power1",
+      },
+      {
+        x: 0,
+        duration: 2,
+        yoyo: true,
+        opacity: 1,
+        ease: "power1.inOut",
+        stagger: {
+          each: 0.4, // Adjust this value for the delay between each animation
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".contactlabel",
+      {
+        duration: 2,
+        y: -50,
+        opacity: 0,
+        yoyo: true,
+        stagger: {
+          each: 0.4, // Adjust this value for the delay between each animation
+        },
+        ease: "power1",
+      },
+      {
+        y: 0,
+        duration: 2,
+        yoyo: true,
+        opacity: 1,
+        ease: "power1.inOut",
+        stagger: {
+          each: 0.4, // Adjust this value for the delay between each animation
+        },
+      }
+    );
+  });
+
   return (
     <>
       <div className="absolute inset-0 -z-10 h-full w-full items-center py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
@@ -17,10 +72,11 @@ const Contact = () => {
           className="tw-left-0 tw-right-0 tw-bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] tw-bg-[size:24px_24px]"
           style={{}}
         ></div>
+        <BootstrapNav />
         <section className="contact" id="contact">
           <div className="container">
             <h2
-              className="text-center text-white mb-5"
+              className="text-center text-white mb-5 contactlabel"
               style={{ fontFamily: "Poppins" }}
             >
               Contact Me
@@ -65,11 +121,7 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
-              <button
-                type="submit"
-                className="btn btn-block"
-                style={{ backgroundColor: "#3a1e88" }}
-              >
+              <button type="submit" className="sendbutton">
                 Send
               </button>
             </form>

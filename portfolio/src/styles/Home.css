@@ -1,3 +1,19 @@
+/* Track */
+::-webkit-scrollbar {
+    width: 10px; /* width of the scrollbar */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(59, 30, 139); /* color of the scrollbar */
+    border-radius: 10px; /* roundness of the scrollbar */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4b2eac; /* darker color when hovered */
+  }
+
 /* src/assets/fonts/fonts.css */
 @font-face {
     font-family: Freeline;
@@ -35,7 +51,7 @@
 
     font-family: Comfortaa;
     color: white;
-    font-size: 90px;
+    font-size: 70px;
 
 }
 
@@ -64,26 +80,31 @@
     height: auto;
 
 }
-
 .circular-container {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-color: rgb(255, 255, 255);
-    border-width: 3px;
-    max-width: 300px; /* Adjust as needed */
-    
-  }
+  width: 50vw; /* Use relative units for responsiveness */
+  height: 50vw; /* Ensure height matches width for perfect circle */
+  max-width: 264px; /* Maximum width */
+  max-height: 264px; /* Maximum height */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(255, 255, 255);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
 
   .text {
     font-size: calc(0.7em + 0.5vw); /* Smaller, responsive text size */
     word-wrap: break-word;
     line-height: 1.2; /* Adjust line-height if needed for better readability */
+    color: #FFF;
   }
 
 .bulletpoint{
@@ -91,6 +112,54 @@
 
     height: 15px;
     width: auto;
+
+}
+
+.text p{
+
+    font-size: 12px;
+
+}
+
+.seemorebtn{
+
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    border-color: rgb(59, 30, 139);
+    color: rgb(59, 30, 139);
+    border-radius: 24px;
+    border-width: 1px;
+    font-family: Montserrat;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+.learnmorebtn{
+    background: rgba(0, 0, 0, 0.5);
+    border-width: 1px;
+    border-color: rgb(59 30 139);
+    border-radius: 24px;
+    color: rgb(59 30 139);
+    font-family: Montserrat;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.learnmorebtn:hover{
+
+   
+    background-color: rgb(59, 30, 139, 0.5);
+    color: #fff;
+ 
+ }
+
+.seemorebtn:hover{
+
+
+   background-color: rgb(59, 30, 139, 0.5);
+   color: #fff;
 
 }
   
@@ -133,15 +202,6 @@
 
 }
 
-.personalcard{
-
-    border-color: white;
-    border-width: 3px;
-    border-radius: 30px;
-
-
-
-}
 
 .header_intro_text {
     position: relative;
@@ -232,6 +292,12 @@ hr {
 
 }
 
+.aboutmepara{
+
+    overflow: auto;
+
+}
+
 .projectimg{
 
     height: 300px;
@@ -304,8 +370,15 @@ hr {
         margin-bottom: 20px;
 
     }
+
+    .seemorebtn{
+
+      width: 70%;
+        
+    }
   }
 
+  
   /* Responsive design */
 @media (max-width: 768px) {
     .col-md-6, .col-md-4, .col-md-2 {
@@ -313,6 +386,10 @@ hr {
       max-width: 100%;
     }
   
+    .circle {
+      width: 80%; /* Adjust width for smaller screens */
+    }
+
     .name {
       text-align: center;
     }
@@ -329,3 +406,23 @@ hr {
         font-size: 2.5rem;
       }
   }
+
+
+
+  @media (max-height: 670px){
+
+
+    .circular-container{
+
+      display: none;
+
+    }
+
+  }
+
+  /* Media query for very small screens */
+@media (max-width: 480px) {
+  .circle {
+    width: 100%; /* Adjust width for mobile devices */
+  }
+}

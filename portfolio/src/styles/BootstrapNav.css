@@ -15,3 +15,29 @@
     margin-top: 15px;
 
 }
+
+.menuicon{
+
+    height: 30px;
+    width: auto;
+
+}
+
+.search{
+    background: rgba(0, 0, 0, 0.5);
+    border-width: 1px;
+    border-color: rgb(59 30 139);
+    border-radius: 10px;
+    color: rgb(59 30 139);
+    font-family: Montserrat;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.search:hover{
+
+    cursor: pointer;
+    background-color: rgb(59, 30, 139, 0.5);
+    color: #fff;
+ 
+ }
