@@ -24,6 +24,9 @@ import BootstrapNav from "../components/BootsrapNav.tsx";
 
 gsap.registerPlugin(GSAPScrollTrigger);
 export const Home: React.FC = () => {
+  useEffect(() => {
+    document.title = "Home";
+  }, []);
   const scrollRef = useRef<HTMLDivElement>(null);
   // const [text] = useState<string>("Weelcome to my Portfolio Website");
   // const [typedText, setTypedText] = useState<string>("");
@@ -278,8 +281,7 @@ export const Home: React.FC = () => {
         scrollTrigger: {
           trigger: ".contact_para",
           start: "top 81%", // Trigger animation when the top of the element is at 80% of the viewport height
-          end: "bottom 25%", // End position for scrollTrigger, for better control
-          toggleActions: "play reverse play reverse", // Ensures the animation reverses when scrolling back up
+          toggleActions: "play reverse none none", // Ensures the animation reverses when scrolling back up
           markers: false, // Set to true for development to see the start/end markers
         },
       }
@@ -336,7 +338,7 @@ export const Home: React.FC = () => {
       {
         x: 0,
         opacity: 1,
-        duration: 1.5, // Adds control over the duration of the animation
+        duration: 1, // Adds control over the duration of the animation
         ease: "power3.out", // Smoother easing for a more natural effect
         scrollTrigger: {
           trigger: ".boldnametop",
@@ -357,7 +359,7 @@ export const Home: React.FC = () => {
       {
         x: 0,
         opacity: 1,
-        duration: 1.5, // Adds control over the duration of the animation
+        duration: 1, // Adds control over the duration of the animation
         ease: "power3.out", // Smoother easing for a more natural effect
         scrollTrigger: {
           trigger: ".seemorebtn",
@@ -378,13 +380,13 @@ export const Home: React.FC = () => {
       {
         x: 0,
         opacity: 1,
-        duration: 1.5, // Adds control over the duration of the animation
+        duration: 1, // Adds control over the duration of the animation
         ease: "power3.out", // Smoother easing for a more natural effect
         scrollTrigger: {
           trigger: ".sendmessage",
           start: "top 81%", // Trigger animation when the top of the element is at 80% of the viewport height
           end: "bottom 25%", // End position for scrollTrigger, for better control
-          toggleActions: "play reverse play reverse", // Ensures the animation reverses when scrolling back up
+          toggleActions: "play reverse none none", // Ensures the animation reverses when scrolling back up
           markers: false, // Set to true for development to see the start/end markers
         },
       }
@@ -399,13 +401,13 @@ export const Home: React.FC = () => {
       {
         x: 0,
         opacity: 1,
-        duration: 1.5, // Adds control over the duration of the animation
+        duration: 1, // Adds control over the duration of the animation
         ease: "power3.out", // Smoother easing for a more natural effect
         scrollTrigger: {
           trigger: ".mailrow",
           start: "top 81%", // Trigger animation when the top of the element is at 80% of the viewport height
-          end: "bottom 25%", // End position for scrollTrigger, for better control
-          toggleActions: "play reverse play reverse", // Ensures the animation reverses when scrolling back up
+
+          toggleActions: "play reverse none none", // Ensures the animation reverses when scrolling back up
           markers: false, // Set to true for development to see the start/end markers
         },
       }
@@ -420,13 +422,13 @@ export const Home: React.FC = () => {
       {
         x: 0,
         opacity: 1,
-        duration: 1.5, // Adds control over the duration of the animation
+        duration: 1, // Adds control over the duration of the animation
         ease: "power3.out", // Smoother easing for a more natural effect
         scrollTrigger: {
           trigger: ".linkedInrow",
           start: "top 81%", // Trigger animation when the top of the element is at 80% of the viewport height
-          end: "bottom 25%", // End position for scrollTrigger, for better control
-          toggleActions: "play reverse play reverse", // Ensures the animation reverses when scrolling back up
+
+          toggleActions: "play reverse none none", // Ensures the animation reverses when scrolling back up
           markers: false, // Set to true for development to see the start/end markers
         },
       }
@@ -441,13 +443,13 @@ export const Home: React.FC = () => {
       {
         x: 0,
         opacity: 1,
-        duration: 1.5, // Adds control over the duration of the animation
+        duration: 1, // Adds control over the duration of the animation
         ease: "power3.out", // Smoother easing for a more natural effect
         scrollTrigger: {
           trigger: ".linkedInrow",
           start: "top 81%", // Trigger animation when the top of the element is at 80% of the viewport height
-          end: "bottom 25%", // End position for scrollTrigger, for better control
-          toggleActions: "play reverse play reverse", // Ensures the animation reverses when scrolling back up
+
+          toggleActions: "play reverse none none", // Ensures the animation reverses when scrolling back up
           markers: false, // Set to true for development to see the start/end markers
         },
       }
@@ -462,13 +464,13 @@ export const Home: React.FC = () => {
       {
         x: 0,
         opacity: 1,
-        duration: 1.5, // Adds control over the duration of the animation
+        duration: 1, // Adds control over the duration of the animation
         ease: "power3.out", // Smoother easing for a more natural effect
         scrollTrigger: {
           trigger: ".githubrow",
           start: "top 81%", // Trigger animation when the top of the element is at 80% of the viewport height
-          end: "bottom 25%", // End position for scrollTrigger, for better control
-          toggleActions: "play reverse play reverse", // Ensures the animation reverses when scrolling back up
+
+          toggleActions: "play reverse none none", // Ensures the animation reverses when scrolling back up
           markers: false, // Set to true for development to see the start/end markers
         },
       }
@@ -945,8 +947,8 @@ export const Home: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="row justify-content-center mt-3 sendmessage">
-                    <button type="button" className="seemorebtn">
+                  <div className="row justify-content-center algn-items-center mt-3 ">
+                    <button type="button" className="sendmessage">
                       Send a Message
                     </button>
                   </div>

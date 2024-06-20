@@ -10,9 +10,14 @@ import BootstrapNav from "../components/BootsrapNav";
 import gsap from "gsap";
 import { ScrollTrigger as GSAPScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
+import { useEffect } from "react";
 
 gsap.registerPlugin(GSAPScrollTrigger);
 const About = () => {
+  useEffect(() => {
+    document.title = "About Me";
+  }, []);
+
   useGSAP(() => {
     gsap.fromTo(
       ".aboutmetxt",
@@ -70,7 +75,7 @@ const About = () => {
           trigger: ".skillcomponent",
           start: "top 85%",
           end: "bottom 0%",
-          toggleActions: "play reverse play reverse",
+          toggleActions: "play none none reverse",
           markers: false,
         },
       }
@@ -197,7 +202,7 @@ const About = () => {
                 </p>
                 <br />
                 <p className="text-white aboutmetxt">
-                  I am adept at self-directed learning, utilizing online
+                  I am adept at self-directed learning, utilising online
                   resources such as YouTube and Stack Overflow to expand my
                   knowledge, troubleshoot challenges, and acquire new skills
                   autonomously.
@@ -235,7 +240,7 @@ const About = () => {
                             <div
                               className="progress-bar progress-bar-striped progress-bar-animated bg-warning"
                               role="progressbar"
-                              style={{ width: "10%" }}
+                              style={{ width: "70%" }}
                               aria-valuenow={80}
                               aria-valuemin={0}
                               aria-valuemax={100}
@@ -263,7 +268,7 @@ const About = () => {
                               className="progress-bar progress-bar-striped progress-bar-animated bg-info"
                               role="progressbar"
                               style={{
-                                width: "10%",
+                                width: "70%",
                                 backgroundColor: "rgb(97 218 251)",
                               }}
                               aria-valuenow={80}
@@ -293,7 +298,7 @@ const About = () => {
                               className="progress-bar progress-bar-striped progress-bar-animated bg-success"
                               role="progressbar"
                               style={{
-                                width: "10%",
+                                width: "60%",
                                 backgroundColor: "rgb(74 108 36)",
                               }}
                               aria-valuenow={80}
@@ -320,7 +325,7 @@ const About = () => {
                         <div
                           className="progress-bar progress-bar-striped progress-bar-animated"
                           role="progressbar"
-                          style={{ width: "50%" }}
+                          style={{ width: "60%" }}
                           aria-valuenow={50}
                           aria-valuemin={0}
                           aria-valuemax={100}
@@ -339,7 +344,7 @@ const About = () => {
                               className="progress-bar progress-bar-striped progress-bar-animated"
                               role="progressbar"
                               style={{
-                                width: "10%",
+                                width: "80%",
                                 backgroundColor: "rgb(73 157 74)",
                               }}
                               aria-valuenow={80}
@@ -358,9 +363,9 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col">
+                  <div className="col mt-2">
                     {" "}
-                    <div className="container">
+                    <div className="container mt-1">
                       <div className="row mb-3">
                         <div className="col-10">
                           <div className="skill_label skillcomponent">
@@ -372,7 +377,7 @@ const About = () => {
                               className="progress-bar progress-bar-striped progress-bar-animated"
                               role="progressbar"
                               style={{
-                                width: "10%",
+                                width: "90%",
                                 backgroundColor: "rgb(68 188 242)",
                               }}
                               aria-valuenow={80}
@@ -402,7 +407,7 @@ const About = () => {
                               className="progress-bar progress-bar-striped progress-bar-animated"
                               role="progressbar"
                               style={{
-                                width: "10%",
+                                width: "100%",
                                 backgroundColor: "rgb(230 81 0)",
                               }}
                               aria-valuenow={80}
@@ -432,7 +437,7 @@ const About = () => {
                               className="progress-bar progress-bar-striped progress-bar-animated"
                               role="progressbar"
                               style={{
-                                width: "10%",
+                                width: "85%",
                                 backgroundColor: "#758ca3",
                               }}
                               aria-valuenow={80}
@@ -459,7 +464,7 @@ const About = () => {
                         <div
                           className="progress-bar progress-bar-striped progress-bar-animated"
                           role="progressbar"
-                          style={{ width: "10%" }}
+                          style={{ width: "70%" }}
                           aria-valuenow={80}
                           aria-valuemin={0}
                           aria-valuemax={100}
@@ -483,7 +488,9 @@ const About = () => {
                 <ul>
                   <li>
                     <strong className="text-white">Software Engineer</strong>{" "}
-                    <p>at Biterite (05/2024 - Present)</p>
+                    <p className="text-white">
+                      at Biterite (05/2024 - Present)
+                    </p>
                     <p className="text-white">
                       Working on various full-stack projects, contributing to
                       both front-end and back-end development.
@@ -491,7 +498,9 @@ const About = () => {
                   </li>
                   <li>
                     <strong className="text-white">Front-End Developer</strong>{" "}
-                    <p>at Self-Employed (05/2022 - Present)</p>
+                    <p className="text-white">
+                      at Self-Employed (05/2022 - Present)
+                    </p>
                     <p className="text-white">
                       Focused on building responsive and user-friendly web
                       applications using React and other front-end technologies.
@@ -511,7 +520,9 @@ const About = () => {
                     <strong className="text-white">
                       Bachelor of Science in Computer Science
                     </strong>{" "}
-                    <p>- London Metropolitan University (09/2021 - 05/2024)</p>
+                    <p className="text-white">
+                      - London Metropolitan University (09/2021 - 05/2024)
+                    </p>
                   </li>
                   {/* 
                       //Extra space for education

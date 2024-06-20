@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/BootstrapNav.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import myLogo from "../assets/Jays Development & Design.png";
@@ -7,14 +7,15 @@ import menuicon from "../assets/Project/icons/icons8-menu-96.png";
 
 export const BootstrapNav = () => {
   const [dropdown, setDropdown] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleDropdown = () => {
     setDropdown(!dropdown);
   };
 
   const handleProjectClick = () => {
-    navigate("/projects");
+    // navigate("/projects");
+    console.log("Coming Soon");
   };
 
   return (
@@ -69,41 +70,46 @@ export const BootstrapNav = () => {
               </div>
               <i className="fas fa-caret-down" />
               {dropdown && (
-                <div className="dropdown-menu show customdrop">
+                <div className="dropdown-menu show overflow-hidden customdrop">
                   <Link className="dropdown-item item" to="#">
-                    <p>
-                      Web Development - <small>Coming Soon</small>
+                    <p className="text-white">
+                      Web Development -{" "}
+                      <small className="text-white">Coming Soon</small>
                     </p>
                   </Link>
                   <Link className="dropdown-item item" to="#">
-                    <p>
-                      Mobile Development - <small>Coming Soon</small>
+                    <p className="text-white">
+                      Mobile Development -{" "}
+                      <small className="text-white">Coming Soon</small>
                     </p>
                   </Link>
                   <Link className="dropdown-item item" to="#">
-                    <p>
-                      API Development - <small>Coming Soon</small>
+                    <p className="text-white">
+                      API Development -{" "}
+                      <small className="text-white">Coming Soon</small>
                     </p>
                   </Link>
                   <Link className="dropdown-item item" to="#">
-                    <p>
-                      Database Management - <small>Coming Soon</small>
+                    <p className="text-white">
+                      Database Management -{" "}
+                      <small className="text-white">Coming Soon</small>
                     </p>
                   </Link>
                   <Link className="dropdown-item item" to="#">
-                    <p>
-                      Real-Time Applications - <small>Coming Soon</small>
+                    <p className="text-white">
+                      Real-Time Applications -{" "}
+                      <small className="text-white">Coming Soon</small>
                     </p>
                   </Link>
                   <Link className="dropdown-item item" to="#">
-                    <p>
-                      DevOps - <small>Coming Soon</small>
+                    <p className="text-white">
+                      DevOps - <small className="text-white">Coming Soon</small>
                     </p>
                   </Link>
                   <hr className="dropdown-divider" />
                   <Link className="dropdown-item " to="#">
-                    <p>
-                      Others <small>Coming Soon</small>
+                    <p className="text-white">
+                      Others <small className="text-white">Coming Soon</small>
                     </p>
                   </Link>
                 </div>

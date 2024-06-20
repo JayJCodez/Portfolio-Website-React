@@ -1,16 +1,18 @@
-// import React from "react";
-// import Navbar from "./components/Navbar";
-// import Header from "./components/Header";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { Home } from "./Pages/Home";
 import About from "./Pages/About";
 import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
-// import Footer from "./components/Footer";
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home } from "./Pages/Home";
 import Footer from "./components/Footer";
 import CardLayout from "./components/ProjectCarousel";
 import TailwindTest from "./components/TailwindTest";
+import ReactGA from "react-ga4";
+import { useEffect } from "react";
 
 const App = () => {
   return (
@@ -25,9 +27,24 @@ const App = () => {
           <Route path="/cardlayout" element={<CardLayout />} />
         </Routes>
         <Footer />
+        <Analytics />
       </div>
     </Router>
   );
+};
+
+const Analytics = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: location.pathname,
+      title: document.title, // Optionally send the page title
+    });
+  }, [location]);
+
+  return null;
 };
 
 export default App;

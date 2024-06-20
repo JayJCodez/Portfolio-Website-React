@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/Contact.css";
 import BootstrapNav from "../components/BootsrapNav";
 import gsap from "gsap";
@@ -7,6 +7,10 @@ import { ScrollTrigger as GSAPScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(GSAPScrollTrigger);
 const Contact = () => {
+  useEffect(() => {
+    document.title = "Contact";
+  }, []);
+
   const [visibility, setVisibility] = useState(false);
 
   const handleSubmit = (e: { preventDefault: () => void }) => {

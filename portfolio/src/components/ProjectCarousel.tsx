@@ -1,18 +1,19 @@
 import lmsLogo from "../assets/Project/Java/LMS/Screenshot 2024-05-06 at 20.11.20.png";
-import eventzLogo from "../assets/Project/Kotlin/Screenshot 2024-05-16 at 07.11.46.png";
+// import eventzLogo from "../assets/Project/Kotlin/Screenshot 2024-05-16 at 07.11.46.png";
 import flutterLogo from "../assets/Project/Flutter/Screenshot 2024-06-13 at 17.26.27.png";
 import "../styles/LandingCarousel.css";
 import gsap from "gsap";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { ScrollTrigger as GSAPScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(GSAPScrollTrigger);
 const ProjectCarousel = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleProjectShortcut = () => {
-    navigate("/projects");
+    // navigate("/projects");
+    console.log("Coming Soon");
   };
 
   useGSAP(() => {
@@ -31,6 +32,27 @@ const ProjectCarousel = () => {
           trigger: ".para",
           start: "top 90%", // Trigger animation when the top of the element is at 80% of the viewport height
           end: "bottom 20%", // End position for scrollTrigger, for better control
+          toggleActions: "play reverse play reverse", // Ensures the animation reverses when scrolling back up
+          markers: false, // Set to true for development to see the start/end markers
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".seemorebtn",
+      {
+        x: 30,
+        opacity: 0,
+      },
+      {
+        x: 1,
+        opacity: 1,
+        duration: 1.5, // Adds control over the duration of the animation
+        ease: "power3.out", // Smoother easing for a more natural effect
+        scrollTrigger: {
+          trigger: ".project_two",
+          start: "top 90%", // Trigger animation when the top of the element is at 80% of the viewport height
+          end: "bottom 15%", // End position for scrollTrigger, for better control
           toggleActions: "play reverse play reverse", // Ensures the animation reverses when scrolling back up
           markers: false, // Set to true for development to see the start/end markers
         },
@@ -165,15 +187,15 @@ const ProjectCarousel = () => {
                     <h3>Event Management Mobile App (Kotlin/Java)</h3>
                     <ul>
                       <li>
-                        <strong>Features:</strong>{" "}
-                        <p>
+                        <strong className="text-white">Features:</strong>{" "}
+                        <p className="text-white">
                           Implemented ticket purchasing, attendee tracking, and
                           event modification.
                         </p>
                       </li>
                       <li>
-                        <strong>Backend:</strong>{" "}
-                        <p>
+                        <strong className="text-white">Backend:</strong>{" "}
+                        <p className="text-white">
                           Used PHP for server requests and JavaScript (CommonJS)
                           for backend development.
                         </p>
@@ -184,24 +206,29 @@ const ProjectCarousel = () => {
                     <h3>Library Management System (Java/JavaFX)</h3>
                     <ul>
                       <li>
-                        <strong>UI Development:</strong>
-                        <p>Created with JavaFX.</p>
+                        <strong className="text-white">UI Development:</strong>
+                        <p className="text-white">Created with JavaFX.</p>
                       </li>
                       <li>
-                        <strong>Database Integration:</strong>
-                        <p>Used SQLConnector for Azure-hosted database.</p>
+                        <strong className="text-white">
+                          Database Integration:
+                        </strong>
+                        <p className="text-white">
+                          Used SQLConnector for Azure-hosted database.
+                        </p>
                       </li>
                       <li>
-                        <strong>Interfaces:</strong>{" "}
-                        <p>Designed for both admins and users.</p>
+                        <strong className="text-white">Interfaces:</strong>{" "}
+                        <p className="text-white">
+                          Designed for both admins and users.
+                        </p>
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div className="container-fluid">
                   <button
-                    className="seemorebtn m-4 text-center"
-                    style={{ width: "85%", justifyContent: "center" }}
+                    className="m-4 text-center seemorebtn"
                     type="submit"
                     onClick={handleProjectShortcut}
                   >
@@ -232,17 +259,20 @@ const ProjectCarousel = () => {
                   data-bs-slide-to="1"
                   aria-label="Slide 2"
                 ></button>
-                <button
+                {/* <button
                   type="button"
                   data-bs-target="#carouselExampleIndicators"
                   data-bs-slide-to="2"
                   aria-label="Slide 3"
-                ></button>
+                ></button> */}
               </div>
               <div className="carousel-inner">
                 <div className="carousel-item active">
                   <img src={lmsLogo} className="d-block w-100" alt="..." />
                 </div>
+                {/* 
+                Additional Caroursel Item for Images
+
                 <div className="carousel-item ">
                   <img
                     src={eventzLogo}
@@ -250,7 +280,7 @@ const ProjectCarousel = () => {
                     alt="..."
                     style={{ height: "500px" }}
                   />
-                </div>
+                </div> */}
                 <div className="carousel-item">
                   <img src={flutterLogo} className="d-block w-100" alt="..." />
                 </div>
