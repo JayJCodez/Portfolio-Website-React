@@ -4,6 +4,7 @@ import BootstrapNav from "../components/BootsrapNav";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger as GSAPScrollTrigger } from "gsap/all";
+import axios from "axios";
 
 gsap.registerPlugin(GSAPScrollTrigger);
 const Contact = () => {
@@ -11,12 +12,36 @@ const Contact = () => {
     document.title = "Contact";
   }, []);
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   const [visibility, setVisibility] = useState(false);
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(); // Prevent form submission
-    setVisibility(true); // Show the toast notification
-    setTimeout(() => setVisibility(false), 10000); // Hide the toast after 3 seconds
+    try {
+      await axios.post(
+        "https://portfolio-jayjcodez-95ac4dce2df6.herokuapp.com/api/contact",
+        formData
+      );
+      setVisibility(true); // Show the toast notification
+      setTimeout(() => setVisibility(false), 10000); // Hide the toast after 10 seconds
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Failed to send message.");
+    }
   };
 
   useGSAP(() => {
@@ -93,6 +118,9 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="form-control"
                   placeholder="Enter your name"
                   style={{ background: "transparent", color: "white" }}
@@ -106,6 +134,9 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="form-control"
                   placeholder="Enter your email"
                   style={{ background: "transparent", color: "white" }}
@@ -119,6 +150,9 @@ const Contact = () => {
                 <textarea
                   id="message"
                   className="form-control"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Enter your message"
                   style={{ background: "transparent", color: "white" }}
                   rows={5}
