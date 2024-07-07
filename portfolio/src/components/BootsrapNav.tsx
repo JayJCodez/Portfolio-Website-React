@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/BootstrapNav.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import myLogo from "../assets/Jays Development & Design.png";
+import myLogo from "../assets/APP & web development.gif";
 import menuicon from "../assets/Project/icons/icons8-menu-96.png";
 
 export const BootstrapNav = () => {
@@ -20,12 +20,14 @@ export const BootstrapNav = () => {
 
   return (
     <nav
-      className="navbar navbar-expand-lg"
+      className="navbar navbar-expand-lg p-0"
       style={{ background: " rgb(59, 30, 139, 0.5)" }}
     >
       <div className="container-fluid">
-        <Link className="navbar-brand" to="#">
-          <img src={myLogo} alt="" width="30" height="24" />
+        <Link className="navbar-brand" to="/">
+          <div id="frame">
+            <img src={myLogo} alt="" id="logo" />
+          </div>
         </Link>
         <button
           className="navbar-toggler"
@@ -62,7 +64,11 @@ export const BootstrapNav = () => {
                   dropdown ? "show" : ""
                 } text-white`}
                 role="button"
-                style={{ fontFamily: "Montserrat", fontSize: "20px" }}
+                style={{
+                  fontFamily: "Montserrat",
+                  fontSize: "20px",
+                  paddingTop: "4px",
+                }}
                 aria-expanded={dropdown}
                 onClick={handleProjectClick}
               >
@@ -121,11 +127,12 @@ export const BootstrapNav = () => {
               </Link>
             </li>
           </ul>
-          <form className="d-flex" role="search">
+          <form className="d-flex" role="search" id="searchform">
             <input
-              className="form-control me-2"
+              className="form-control me-2 rounded-5"
               type="search"
               placeholder="Search"
+              id="searchfield"
               aria-label="Search"
               style={{
                 borderColor: " rgb(59, 30, 139, 0.5)",
@@ -133,8 +140,8 @@ export const BootstrapNav = () => {
                 color: "white",
               }}
             />
-            <button className="search" type="submit">
-              Search
+            <button className="search rounded-5" type="submit">
+              <i className="bi bi-search"></i>
             </button>
           </form>
         </div>

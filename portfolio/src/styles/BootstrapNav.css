@@ -27,11 +27,13 @@
     background: rgba(0, 0, 0, 0.5);
     border-width: 1px;
     border-color: rgb(59 30 139);
-    border-radius: 10px;
     color: rgb(59 30 139);
     font-family: Montserrat;
     font-size: 18px;
-    padding: 5px;
+    padding: 7px;
+    height: 45px;
+    width: 45px;
+ 
 }
 
 .search:hover{
@@ -59,4 +61,42 @@
 .customdrop .dropdown-item:focus {
   background-color: rgba(59, 30, 139, 0.8) !important;
   color: #ffffff !important;
+}
+
+#logo{
+
+  display: block;
+  margin: 0 auto;
+  height: 59px;
+  width: 59px;
+ 
+
+}
+
+#frame{
+
+
+  height: auto;
+  width: 60px;
+  display: inline-block;
+  overflow: hidden;
+  transform: scale(1.5);
+
+}
+
+@media (max-width: 991px) {
+  
+  #searchform{
+
+    margin-bottom: 10px;
+
+  }
+
+}
+
+#searchfield::placeholder{
+
+  color: rgb(147, 146, 146); /* Red color for the placeholder */
+  opacity: 1; /* Make sure the opacity is 1 for full color visibility */
+
 }
