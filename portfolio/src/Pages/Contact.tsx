@@ -33,7 +33,7 @@ const Contact = () => {
     e.preventDefault(); // Prevent form submission
     try {
       await axios.post(
-        "https://portfolio-jayjcodez-95ac4dce2df6.herokuapp.com/api/contact",
+        "",
         formData
       );
       setVisibility(true); // Show the toast notification
